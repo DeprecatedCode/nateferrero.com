@@ -1,0 +1,55 @@
+html, body, ul, ol, li, form, fieldset, legend, h1, h2, h3, h4, h5, h6, p,
+fieldset, img, input, textarea, select, {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+}
+
+h1 {
+    font-size: 21px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4, h5, h6 {
+    font-size: 14px;
+}
+
+table {
+    border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    background-color: #ddd;
+}
+
+body, input, textarea, select {
+    font-size: 14px;
+    font-family: Asap, Helvetica, sans-serif;
+}
+
+#content {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10%;
+    box-shadow: 0 0 1em #999;
+    padding: 2em;
+    border-radius: 0.25em;
+    background-color: #f8f8f8;
+}
+
+#content *:first-child {
+    margin-top: 0;
+}
+
+#content *:last-child {
+    margin-bottom: 0;
+}
