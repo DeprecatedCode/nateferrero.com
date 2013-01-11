@@ -59,11 +59,13 @@
                             var d = c.substr(1).split(' ');
                             var e = d.shift();
                             config[e] = d.join(' ');
-                        } else {
+                        } else if(c.indexOf(' ') > 0) {
                             var f = c.split(' ');
                             config.url = f.shift();
                             config.title = f.join(' ');
                             postIndex.push(config);
+                            config = {};
+                        } else {
                             config = {};
                         }
                     }
