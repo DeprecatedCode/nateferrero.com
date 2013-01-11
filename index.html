@@ -9,6 +9,7 @@
     <script src="/scripts/router.js" type="text/javascript"></script>
     <script>
         var router = new Router();
+        var md = new Markdown.Converter();
 
         var post = function(name) {
             $.ajax({
@@ -16,7 +17,20 @@
                 dataType: 'text',
                 url: '/posts/' + name + '.md',
                 success: function(data) {
-                    $('.content').html(data); 
+                    data = data.split('\n');
+                    var text = '', config = {};
+                    for(var i = 0; i < data.length; i++) {
+                        var c = data[i];
+                        if(c.charAt(0) === '@') {
+                            var d = c.substr(1).split(' ');
+                            var e = d.shift();
+                            config[e] = d.join(' ');
+                        } else {
+                            text += c + '\n';
+                        }
+                    }
+                    console.log(config);
+                    $('.content').html(md.makeHtml(text));
                 },
                 error: function() {
                     $('.content').html('<h1>Page Not Found</h1>'+
@@ -26,6 +40,36 @@
         };
         router.route('/posts/:name', post);
         router.route('/posts/:name/', post);
+        
+        /**
+         * Load Post List
+         */
+        var postIndex = [];
+        $(function() {
+            $.ajax({
+                type: 'GET',
+                dataType: 'text',
+                url: '/posts/index.md',
+                success: function(data) {
+                    data = data.split('\n');
+                    var config = {};
+                    for(var i = 0; i < data.length; i++) {
+                        var c = data[i];
+                        if(c.charAt(0) === '@') {
+                            var d = c.substr(1).split(' ');
+                            var e = d.shift();
+                            config[e] = d.join(' ');
+                        } else {
+                            var f = c.split(' ');
+                            config.url = f.shift();
+                            config.title = f.join(' ');
+                            postIndex.push(config);
+                            config = {};
+                        }
+                    }
+                }
+            });
+        });
     </script>
 </head>
 <body>

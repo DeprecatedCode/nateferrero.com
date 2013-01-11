@@ -39,8 +39,8 @@ body, input, textarea, select {
 }
 
 .content {
-    width: 60%;
-    margin: 0 auto 2em;
+    width: 70%;
+    margin: 0 auto 3em;
     margin-top: 10%;
     box-shadow: 0 0 1em #999;
     padding: 2em;
