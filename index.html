@@ -38,8 +38,10 @@
                 }
             });
         };
-        router.route('/posts/:name', post);
-        router.route('/posts/:name/', post);
+        router.route('/:name', post);
+        router.route('/:name/', function(name) {
+            router.navigate('/' + name);
+        });
         
         /**
          * Load Post List
