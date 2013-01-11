@@ -51,10 +51,6 @@
                 }
             });
         };
-        router.route('/:name', post);
-        router.route('/:name/', function(name) {
-            router.navigate('/' + name);
-        });
         
         var home = {load: true};
         home.show = function() {
@@ -65,7 +61,12 @@
                 post(postIndex[0].url);
             }
         };
+
         router.route('/', home.show);
+        router.route('/:name', post);
+        router.route('/:name/', function(name) {
+            router.navigate('/' + name);
+        });
         
         function ord(x) {
             var n = x % 100;
@@ -115,6 +116,19 @@
                     if(home.load) {
                         home.show();
                     }
+                }
+            });
+        
+            /**
+             * Capture all links
+             */
+            $('.width').on('click', 'a', function(e) {
+                var href = $(this).attr('href');
+                if(href.substr(0, 1) === '/') {
+                    home.load = true;
+                    router.navigate(href);
+                    e.preventDefault();
+                    return false;
                 }
             });
         });
