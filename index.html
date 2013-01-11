@@ -10,7 +10,7 @@
     <script>
         var router = new Router();
 
-        router.route('/posts/:name', function(name) {
+        var post = function(name) {
             $.ajax({
                 type: 'GET',
                 dataType: 'text',
@@ -23,7 +23,9 @@
                         '<p>You may want to go to the <a href="/">home page</a>.</p>');
                 }
             });
-        });
+        };
+        router.route('/posts/:name', post);
+        router.route('/posts/:name/', post);
     </script>
 </head>
 <body>
