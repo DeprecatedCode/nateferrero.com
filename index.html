@@ -11,8 +11,17 @@
         var router = new Router();
 
         router.route('/posts/:name', function(name) {
-            $.get('/posts/' + name + '.txt', function(data) {
-               $('.content').html(data); 
+            $.ajax({
+                type: 'GET',
+                dataType: 'text',
+                url: '/posts/' + name + '.md',
+                success: function(data) {
+                    $('.content').html(data); 
+                },
+                error: function() {
+                    $('.content').html('<h1>Page Not Found</h1>'+
+                        '<p>You may want to go to the <a href="/">home page</a>.</p>');
+                }
             });
         });
     </script>
