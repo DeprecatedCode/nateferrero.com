@@ -29,6 +29,8 @@ table {
 
 body {
     background-color: #ddd;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body, input, textarea, select {
@@ -36,9 +38,9 @@ body, input, textarea, select {
     font-family: Asap, Helvetica, sans-serif;
 }
 
-#content {
+.content {
     width: 60%;
-    margin: 0 auto;
+    margin: 0 auto 2em;
     margin-top: 10%;
     box-shadow: 0 0 1em #999;
     padding: 2em;
@@ -46,10 +48,10 @@ body, input, textarea, select {
     background-color: #f8f8f8;
 }
 
-#content *:first-child {
+.content :first-child {
     margin-top: 0;
 }
 
-#content *:last-child {
+.content :last-child {
     margin-bottom: 0;
 }
