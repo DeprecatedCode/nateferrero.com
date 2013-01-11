@@ -63,6 +63,7 @@
                             var f = c.split(' ');
                             config.url = f.shift();
                             config.title = f.join(' ');
+                            config.tags = config.tags ? config.tags.split(' ') : [];
                             postIndex.push(config);
                             config = {};
                         } else {
