@@ -8,18 +8,26 @@ fieldset, img, input, textarea, select, {
 
 h1 {
     font-size: 21px;
+    margin-bottom: 0.333em;
 }
 
 h2 {
     font-size: 18px;
+    margin-bottom: 0.333em;
 }
 
 h3 {
     font-size: 16px;
+    margin-bottom: 0.333em;
 }
 
 h4, h5, h6 {
     font-size: 14px;
+    margin-bottom: 0.333em;
+}
+
+p {
+    margin: 0 0 1em;
 }
 
 table {
@@ -31,6 +39,7 @@ body {
     background-color: #ddd;
     overflow-y: scroll;
     overflow-x: hidden;
+    line-height: 1.4;
 }
 
 body, input, textarea, select {
@@ -38,20 +47,95 @@ body, input, textarea, select {
     font-family: Asap, Helvetica, sans-serif;
 }
 
+iframe {
+    margin-top: 1em;
+}
+
+.width {
+    margin: 0 auto 1em;
+    position: relative;
+    max-width: 500px;
+}
+.icon {
+    height: 16px;
+    width: 16px;
+    margin-bottom: 12px;
+    display: block;
+    opacity: 0.5;
+}
+
+.icon-container {
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: -31px;
+    top: 34px;
+}
+
+.icon-container:hover {
+    padding: 20px;
+    height: auto;
+    left: -51px;
+    top: 14px;
+}
+
+
+.icon-home {
+    background-image: url(/images/home.png);
+}
+
+.icon-mail {
+    background-image: url(/images/mail_2.png);
+}
+
+.icon-phone {
+    background-image: url(/images/phone_2.png);
+}
+
+.icon-calendar {
+    background-image: url(/images/calendar_2.png);
+}
+
+.icon-star {
+    background-image: url(/images/star_fav.png);
+}
+
+.icon-web {
+    background-image: url(/images/globe_3.png);
+}
+
+.icon-link {
+    background-image: url(/images/link.png);
+}
+
 .content {
-    width: 70%;
-    margin: 0 auto 3em;
-    margin-top: 10%;
+    margin-top: 70px;
     box-shadow: 0 0 1em #999;
     padding: 2em;
     border-radius: 0.25em;
     background-color: #f8f8f8;
 }
 
-.content :first-child {
+.content :first-child, .right :first-child {
     margin-top: 0;
 }
 
-.content :last-child {
+.content :last-child, .right :last-child  {
     margin-bottom: 0;
+}
+
+.author {
+    padding: 1em 2em 2em;
+}
+
+.author, .author a {
+    text-align: right;
+    font-style: italic;
+    color: #888;
+}
+
+a {
+    color: darkorange;
+    text-decoration: none;
 }

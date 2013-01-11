@@ -12,6 +12,7 @@
         var md = new Markdown.Converter();
 
         var post = function(name) {
+            home.load = false;
             $.ajax({
                 type: 'GET',
                 dataType: 'text',
@@ -30,7 +31,19 @@
                         }
                     }
                     console.log(config);
+                    
+                    /**
+                     * Spotify Track Support
+                     */
+                    text = text.replace(/spotify:track:\w+/g, '<iframe src="https://embed.spotify.com/?uri=$&"'+
+                        ' width="300" height="80" frameborder="0" allowtransparency="true"></iframe>');
+                    
+                    /**
+                     * Render
+                     */
                     $('.content').html(md.makeHtml(text));
+                    $('.author').html(dateFormat(config.date)+
+                        ' &ndash; <a href="/">Nate Ferrero</a>');
                 },
                 error: function() {
                     $('.content').html('<h1>Page Not Found</h1>'+
@@ -42,6 +55,33 @@
         router.route('/:name/', function(name) {
             router.navigate('/' + name);
         });
+        
+        var home = {load: true};
+        home.show = function() {
+            if(!home.load) {
+                return;
+            }
+            if(postIndex[0]) {
+                post(postIndex[0].url);
+            }
+        };
+        router.route('/', home.show);
+        
+        function ord(x) {
+            var n = x % 100;
+            var suff = ["th", "st", "nd", "rd", "th"]; // suff for suffix
+            return x + (n<21?(n<4 ? suff[n]:suff[0]): (n%10>4 ? suff[0] : suff[n%10]));
+        }
+        
+        /**
+         * Date Format
+         */
+        function dateFormat(x) {
+            x = x.split('-');
+            var y = parseInt(x[0]), m = parseInt(x[1]), d = parseInt(x[2]);
+            return 'Jan Feb Mar Apr May June July Aug Sept Oct Nov Dec'.split(' ')[m-1] +
+                ' ' + ord(d) + ', ' + y;
+        }
         
         /**
          * Load Post List
@@ -72,14 +112,28 @@
                             config = {};
                         }
                     }
+                    if(home.load) {
+                        home.show();
+                    }
                 }
             });
         });
     </script>
 </head>
 <body>
-    <div class="content">
-        <h1>Nate Ferrero</h1>
-        <p>Sample text</p>
+    <div class="width">
+        <div class="icon-container">
+            <a class="icon icon-home" href="/"></a>
+            <a class="icon icon-phone" href="/contact"></a>
+            <br/>
+            <a class="icon icon-star" href="/featured"></a>
+            <a class="icon icon-web" href="/links"></a>
+            
+        </div>
+        <div class="content">
+            <p>Loading Content</p>
+        </div>
+        <div class="author">
+        </div>
     </div>
 </body>
