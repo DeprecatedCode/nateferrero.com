@@ -61,7 +61,15 @@ iframe {
     width: 16px;
     margin-bottom: 12px;
     display: block;
-    opacity: 0.5;
+    opacity: 0.4;
+}
+
+.icon:hover {
+    opacity: 0.7;
+}
+
+.icon:active {
+    opacity: 0.9;
 }
 
 .icon-container {
