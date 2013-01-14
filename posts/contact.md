@@ -1,5 +1,9 @@
+@title Contact
 @date 2013-01-10
-@author Nate Ferrero
+
+# Nathanael Stephen Ferrero, 1989 &mdash;
+
+Future/realist. Kept grounded by my wonderful wife Karla. Dreams of data structures and happy robots. Coffee lover.
 
 # Talk & Text
 (919) 426-2830
