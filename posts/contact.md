@@ -13,3 +13,5 @@ Future/realist. Kept grounded by my wonderful wife Karla. Dreams of data structu
 
 # Work
 [LinkedIn](http://www.linkedin.com/in/nateferrero), [GitHub](https://github.com/NateFerrero), and [Node Packages](https://npmjs.org/~NateFerrero)
+
+<div style="transform:rotate(7deg);-webkit-transform:rotate(7deg);position: absolute; border-radius: 0.5em; right: -1em; top: 9em; box-shadow: 0 0 0.5em #ccc; width: 160px; height: 160px; background-position: -15px -15px; background-image: url(http://graph.facebook.com/nateferrero/picture?type=large);"></div>

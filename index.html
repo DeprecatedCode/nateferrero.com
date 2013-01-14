@@ -10,6 +10,12 @@
     <script>
         var router = new Router();
         var md = new Markdown.Converter();
+        
+        function showPhoto(url, style) {
+            $('.content').append(
+                $('<div style="'+style+';background-image:url('+url+')">')
+            );
+        }
 
         var post = function(name) {
             home.load = false;
