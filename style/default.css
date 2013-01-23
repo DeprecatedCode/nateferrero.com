@@ -170,7 +170,7 @@ body, input, textarea, select {
 
 .content > .author:last-child {
     padding: 1em 2em 1em;
-    margin: 0 -2em -2em;
+    margin: -0.26em -2em -2em;
 }
 
 .author, .author a {
