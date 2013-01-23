@@ -90,7 +90,7 @@ body, input, textarea, select {
 }
 
 .icon-home {
-    background-image: url(/images/home.png);
+    background-image: url(/images/home_2.png);
 }
 
 .icon-mail {
@@ -152,12 +152,39 @@ body, input, textarea, select {
     background-color: #ccc;
 }
 
-.content {
-    margin-top: 70px;
-    box-shadow: 0 0 0.5em #ccc;
-    padding: 2em;
-    border-radius: 0.25em;
+.header {
+    margin-top: 50px;
+}
+
+.tweet {
+    font-size: 13px;
+    padding: 1em 1em 2em;
+    margin: 1em 1em -2em;
+    color: #333;
     background-color: #f8f8f8;
+}
+
+.bird {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    background-image: url(/images/favicons/twitter16.png);
+    bottom: 20px;
+    right: 10px;
+    opacity: 0.5;
+}
+
+.page, .tweet {
+    box-shadow: 0 0 0.5em #ccc;
+    border-radius: 0.25em;
+    position: relative;
+}
+
+.page {
+    margin-top: 1em;
+    padding: 2em;
+    background-color: #fff;
 }
 
 .content > :first-child, .content > blockquote > :first-child, .right > :first-child {
@@ -185,7 +212,7 @@ body, input, textarea, select {
 }
 
 a {
-    color: darkorange;
+    color: #d60;
     text-decoration: none;
 }
 
@@ -267,7 +294,7 @@ blockquote {
 }
 
 #search-results .item-active, #search-results .item-active div.date {
-    background-color: darkorange;
+    background-color: #d60;
     color: white;
 }
 
