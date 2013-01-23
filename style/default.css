@@ -101,6 +101,10 @@ body, input, textarea, select {
     background-image: url(/images/phone_2.png);
 }
 
+.icon-talk {
+    background-image: url(/images/speechbubble_2.png);
+}
+
 .icon-calendar {
     background-image: url(/images/calendar_2.png);
 }
