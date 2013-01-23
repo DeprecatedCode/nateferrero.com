@@ -1,5 +1,7 @@
 @title Physics is Observation
 
+# Physics is Observation
+
 Physics is 100% observation, we can't make the sun shine, we can't make grass green. We can only try to find out why these things are so. 
 
 Now lets say we are walking across a vast desert and we have never seen technology. Suddenly something shiny appears on the horizon. After many hours we approach it. It's a car, full of gas, with the keys inside. After pressing every possible button we find that turning the key to the right makes a loud noise and you can feel the vibration running through the car.

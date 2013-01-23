@@ -40,8 +40,10 @@ var post = function(name) {
             /**
              * Spotify Track Support
              */
-            text = text.replace(/spotify:track:\w+/g, '<iframe src="https://embed.spotify.com/?uri=$&"'+
-                ' width="300" height="80" frameborder="0" allowtransparency="true"></iframe>');
+            text = text.replace(/\-(spotify:[:\w]+)/g, '<iframe src="https://embed.spotify.com/?uri=$1"'+
+                ' width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>');
+            text = text.replace(/\+(spotify:[:\w]+)/g, '<iframe src="https://embed.spotify.com/?uri=$1"'+
+                ' width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>');
             
             /**
              * Render to HTML
