@@ -51,7 +51,7 @@ var post = function(name) {
             /**
              * Automatically add class to next element
              */
-            text = text.replace(/\~(.+?):(.+?)\s*<(.+?)>(.*?<\/.+?>)/, '<$3 class="$1 $1-$2">$4');
+            text = text.replace(/\~(.+?):(.+?)\s*<(.+?)>(.*?<\/.+?>)/g, '<$3 class="$1 $1-$2">$4');
             
             /**
              * Render
