@@ -1,0 +1,5 @@
+~app:c9         [Cloud9](https://c9.io/)
+~app:duckduckgo [DuckDuckGo](https://duckduckgo.com/)
+~app:gmail      [GMail](https://mail.google.com/)
+~app:github     [GitHub](https://github.com/)
+~app:voice      [Voice](https://voice.google.com/)
