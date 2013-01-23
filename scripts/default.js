@@ -51,7 +51,7 @@ var post = function(name) {
             /**
              * Automatically add class to next element
              */
-            text = text.replace(/\~(.+?):(.+?)\s*<(.+?)>(.*?<\/.+?>)/g, '<$3 class="$1 $1-$2">$4');
+            text = text.replace(/\~(app):(.+?)\s*<(.+?)>(.*?<\/.+?>)/g, '<$3 class="$1" style="background-image: url(/images/favicons/$2.png);">$4');
             
             /**
              * Render

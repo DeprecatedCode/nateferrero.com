@@ -119,11 +119,18 @@ iframe {
     background-image: url(/images/zoom.png);
 }
 
+.app:nth-child(3n) {
+    margin-right: 0;
+}
+
 .app {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 20px;
     margin: 0 1em 1em 0;
+    padding: 80px 20px 10px;
+    background-position: 20px 20px;
+    background-repeat: no-repeat;
 }
 
 .content {
