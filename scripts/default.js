@@ -1,8 +1,8 @@
 /**
  * NateFerrero.com
  */
-var router = new Router();
-var md = new Markdown.Converter();
+var router = new window.Router();
+var md = new window.Markdown.Converter();
 
 function showPhoto(url, style) {
     $('.content').append(
@@ -180,6 +180,7 @@ $(function() {
             home.load = true;
             router.navigate(href);
             e.preventDefault();
+            closeSearch();
             return false;
         }
     });
@@ -187,17 +188,32 @@ $(function() {
     /**
      * Fix search CSS
      */
-    $("#search-box").on('focus blur', function(e) {
+    function closeSearch() {
+        if(!info.searchEnabled) {
+            return;
+        }
+        info.searchEnabled = false;
+        $('#search-results').fadeOut();
+        setTimeout(function() {
+            $('.search').removeClass('search-active');
+        }, 1000);
+    }
+    
+    $('.search').on('click', 'input', function(e) {
+        e.stopPropagation();
+    });
+
+    $('body').on('click', function(e) {
+        closeSearch();
+    });
+
+    $("#search-box").on('focus', function(e) {
         if(document.activeElement === this) {
             $('.search').addClass('search-active');
             $('#search-results').fadeIn(300);
             info.searchEnabled = true;
         } else {
-            info.searchEnabled = false;
-            $('#search-results').fadeOut();
-            setTimeout(function() {
-                $('.search').removeClass('search-active');
-            }, 1000);
+            closeSearch();
         }
     });
     $("#search-results").on('mouseover', 'a', function(e) {
