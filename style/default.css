@@ -119,6 +119,13 @@ iframe {
     background-image: url(/images/zoom.png);
 }
 
+.app {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 0 1em 1em 0;
+}
+
 .content {
     margin-top: 70px;
     box-shadow: 0 0 0.5em #ccc;

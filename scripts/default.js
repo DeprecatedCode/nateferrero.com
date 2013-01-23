@@ -44,10 +44,20 @@ var post = function(name) {
                 ' width="300" height="80" frameborder="0" allowtransparency="true"></iframe>');
             
             /**
+             * Render to HTML
+             */
+            text = md.makeHtml(text);
+
+            /**
+             * Automatically add class to next element
+             */
+            text = text.replace(/\~(.+?):(.+?)\s*<(.+?)>(.*?<\/.+?>)/, '<$3 class="$1 $1-$2">$4');
+            
+            /**
              * Render
              */
             $('head > title').html(config.title + " &bull; Nate Ferrero");
-            $('.content').html(md.makeHtml(text));
+            $('.content').html(text);
             $('.content').append($('<div class="author">').html(
                 '<a href="/' + name + '">Permalink</a>' +
                 (config.date ? ' &ndash; ' + dateFormat(config.date) : '') +
