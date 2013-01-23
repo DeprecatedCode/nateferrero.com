@@ -75,8 +75,7 @@ iframe {
 
 .icon-container {
     width: 16px;
-    height: 16px;
-    overflow: hidden;
+    height: auto;
     position: absolute;
     left: -31px;
     top: 34px;
@@ -84,7 +83,6 @@ iframe {
 
 .icon-container:hover {
     padding: 20px;
-    height: auto;
     left: -51px;
     top: 14px;
 }
