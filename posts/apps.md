@@ -9,6 +9,6 @@
 ~app:github     [GitHub](https://github.com/)
 ~app:gmail      [Gmail](https://mail.google.com/)
 ~app:gmaps      [Maps](https://maps.google.com/)
-~app:soundcloud [SoundCloud](https://soundcloud.com/stream)
+~app:pocket     [Pocket](http://getpocket.com/a/queue/)
 ~app:trello     [Trello](https://trello.com/)
 ~app:voice      [Voice](https://voice.google.com/)
