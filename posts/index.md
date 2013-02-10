@@ -1,4 +1,7 @@
 @tags lyrics
+2013-02-10-guns-for-hands Guns For Hands - Twenty One Pilots
+
+@tags lyrics
 2013-01-23-american-dreamin American Dreamin - B.o.B.
 
 @tags lyrics

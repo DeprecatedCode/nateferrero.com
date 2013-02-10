@@ -1,4 +1,4 @@
-@title Guns for Hands
+@title Guns For Hands
 
 >"The solution is, I see a whole room of these mutant kids,
 Fused at the wrist, I simply tell them they should shoot at this,
