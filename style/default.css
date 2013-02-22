@@ -312,3 +312,14 @@ blockquote {
 	overflow: hidden;
     display: block;
 }
+
+@media only screen 
+and (max-width : 580px) {
+    .width {
+        margin: 0;
+        width: 100%;
+    }
+    body {
+        margin: 0;
+    }
+}
