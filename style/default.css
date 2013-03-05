@@ -79,6 +79,10 @@ body, input, textarea, select {
     background-color: transparent;
 }
 
+.toggle-fullscreen {
+    float: right;
+}
+
 .icon:hover {
     opacity: 0.7;
     background-color: #fff;
@@ -140,6 +144,10 @@ body, input, textarea, select {
     background-image: url(/images/zoom.png);
 }
 
+.icon-picture {
+    background-image: url(/images/picture.png);
+}
+
 .app {
     display: inline-block;
     width: 96px;
@@ -196,6 +204,48 @@ body, input, textarea, select {
     margin-top: 1em;
     padding: 2em;
     background-color: #fff;
+}
+
+body .fullscreen.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    padding: 4em 2em;
+    z-index: 11;
+}
+
+body .fullscreen.icon-container {
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body .fullscreen.search {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 13;
+    width: auto;
+    margin: 0;
+}
+
+body .fullscreen.search #search-box {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body .fullscreen.search #search-results {
+    border-radius: 0;
+}
+
+body .fullscreen.search #search-results .item:first-child {
+    border-radius: 0;
 }
 
 .content > :first-child, .content > blockquote > :first-child, .right > :first-child {

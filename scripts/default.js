@@ -223,4 +223,26 @@ $(function() {
         $('#search-results .item-active').removeClass('item-active');
         $(this).addClass('item-active');
     });
+    
+    $('.icon-container').on('click', '.toggle-fullscreen', function(e) {
+        var f = 'fullscreen';
+        var x = $('.content');
+        var y = $('.icon-container');
+        var z = $('.search');
+        if(x.hasClass(f)) {
+            x.removeClass(f);
+            y.removeClass(f);
+            z.removeClass(f);
+            document.cookie = "fullscreen=n"
+        } else {
+            x.addClass(f);
+            y.addClass(f);
+            z.addClass(f);
+            document.cookie = "fullscreen=y"
+        }
+    });
+    
+    if(document.cookie.indexOf("fullscreen=y") > -1) {
+        $('.toggle-fullscreen').click();
+    }
 });
