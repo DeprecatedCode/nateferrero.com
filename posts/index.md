@@ -1,5 +1,5 @@
 @tags text, science
-2013-03-05-economic-transition.md Economic Transition
+2013-03-05-economic-transition Economic Transition
 
 @tags lyrics
 2013-02-10-guns-for-hands Guns For Hands - Twenty One Pilots
