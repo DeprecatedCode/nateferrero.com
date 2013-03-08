@@ -10,5 +10,6 @@
 ~app:gmail      [Gmail](https://mail.google.com/)
 ~app:gmaps      [Maps](https://maps.google.com/)
 ~app:pocket     [Pocket](http://getpocket.com/a/queue/)
+~app:shift      [SHIFT](https://shift.com/)
 ~app:trello     [Trello](https://trello.com/)
 ~app:voice      [Voice](https://voice.google.com/)
