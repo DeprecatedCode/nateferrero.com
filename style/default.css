@@ -27,7 +27,7 @@ h4, h5, h6 {
 }
 
 p, .fwrap {
-    margin: 0 0 1em;
+    margin: 0px -1px 1em -1px;
 }
 
 iframe {
