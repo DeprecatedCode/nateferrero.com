@@ -14,6 +14,9 @@
 </head>
 <body>
     <div class="width">
+        <h2 style="margin: 1.8em 1.25em -1.5em 13.5em; font-size: 21px;">Peace <span style="float:right">Consistency</span><br/>
+        Progress <span style="float:right">Creation</span><br/>
+        Prosperity <span style="float:right">Culture</span></h2>
         <div class="header"></div>
         <div class="page">
             <div class="icon-container">
@@ -32,5 +35,55 @@
             <input type="text" id="search-box" placeholder="More posts..." />
             <div id="search-results"></div>
         </div>
+        <div class="time" style="color: #888; font-size: 85%; text-align: center;">Current time is
+            <span id="time-kday">&ndash;</span> kd,
+            <span id="time-day">&ndash;</span> d,
+            <span id="time-mday">&ndash;</span> md
+            <span id="time-uday">&ndash;</span> ud since Jan 1, 2000 GMT.
+            <br/><br/>
+            <b style="font-size: 14px;">Common world time is
+                <span id="time-hr"></span> :
+                <span id="time-min"></span> :
+                <span id="time-sec"></span>
+            </b>
+        </div>
+        <script>
+            $(function() {
+                var pad = function(q, x) {
+                    x = String(x);
+                    while (x.length < q) {
+                        x = '0' + x;
+                    }
+                    return x;
+                };
+                setInterval(function() {
+                    // x is in udays (1000 * ms * day / s)
+                    var x = (Date.now() - 946724400000) / 86.400;
+                    
+                    var kdays = parseInt(x / 1e9);
+                    x -= 1e9 * kdays;
+                    
+                    var days = parseInt(x / 1e6);
+                    x -= 1e6 * days;
+
+                    var mdays = parseInt(x / 1e3);
+                    x -= 1e3 * mdays;
+                    
+                    var udays = parseInt(x);
+                    
+                    $('#time-kday').text(kdays);
+                    $('#time-day').text(pad(3, days));
+                    $('#time-mday').text(pad(3, mdays));
+                    $('#time-uday').text(pad(3, udays));
+                    
+                    var hr = parseInt(mdays / 100);
+                    var min = parseInt(mdays - 100 * hr);
+                    var sec = parseInt(udays / 10);
+                    $('#time-hr').text(hr);
+                    $('#time-min').text(pad(2, min));
+                    $('#time-sec').text(pad(2, sec));
+                }, 100);
+            });
+        </script>
     </div>
 </body>
